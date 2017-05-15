@@ -1,0 +1,139 @@
+html, body {
+  background-color: #fff; }
+
+.animate, .container.container-how-it-works .step .bt-border, .container.container-how-it-works .step:hover .bt-border, .animate:hover, .container.container-how-it-works .step .bt-border:hover, .animate:focus, .container.container-how-it-works .step .bt-border:focus {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 46px;
+  font-size: 46px;
+  margin: 0 0 23px 0; }
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: normal;
+  font-size: 31px;
+  line-height: 23px;
+  margin: 0 0 23px 0; }
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0 0 23px 0;
+  font-weight: 300; }
+
+.divider {
+  background: #ffce2e;
+  height: 5px;
+  width: 55px;
+  border-radius: 1px;
+  display: inline-block;
+  margin: -5px auto 30px; }
+
+.tile {
+  background: #444;
+  padding: 50px 30px; }
+
+.navbar {
+  background: transparent;
+  border-bottom: 0; }
+  .navbar .navbar-brand {
+    font-family: 'Permanent Marker', cursive;
+    color: #ffce2e; }
+    .navbar .navbar-brand:hover {
+      color: #ffce2e; }
+  .navbar li a {
+    color: white; }
+
+.btn {
+  font-size: 15px;
+  text-shadow: none;
+  border: none;
+  border-radius: 2px;
+  font-weight: 300; }
+  .btn.btn-gold {
+    background: #ffce2e; }
+  .btn.btn-facebook {
+    background: #3b5998;
+    color: white; }
+  .btn.btn-twitter {
+    background: #1da1f2;
+    color: white; }
+  .btn.btn-google {
+    background: #dd4b39;
+    color: white; }
+  .btn.btn-instagram {
+    background: #405de6;
+    color: white; }
+  .btn.btn-tumblr {
+    background: #35465c;
+    color: white; }
+  .btn.btn-reddit {
+    background: #ff4500;
+    color: white; }
+
+.jumbotron {
+  background: url("../img/bg.png") center center;
+  padding: 120px;
+  background-size: cover;
+  text-align: center;
+  color: #ffffff; }
+  .jumbotron h1, .jumbotron h2 {
+    text-shadow: 1px 1px 1px #222; }
+  .jumbotron h1 {
+    font-weight: bold; }
+  .jumbotron h2 {
+    font-size: 28px;
+    line-height: 10px;
+    color: #ffce2e; }
+  .jumbotron .btn {
+    padding: 10px 30px;
+    font-weight: 300;
+    font-size: 15px; }
+
+.bg {
+  padding: 40px 0; }
+  .bg.bg-white {
+    background: white;
+    color: #222; }
+  .bg.bg-grey {
+    background: #222;
+    color: white; }
+
+.container.container-how-it-works {
+  text-align: center; }
+  .container.container-how-it-works h2 {
+    margin: 10px auto 5px; }
+  .container.container-how-it-works .step:hover .bt-border {
+    border-color: #ffce2e; }
+.container.container-login h1 {
+  margin: 50px auto 23px; }
+.container.container-login .input-group input, .container.container-login .input-group .btn {
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  padding: 6.5px 25px;
+  font-size: 15px;
+  border: 0; }
+.container.container-login .input-group input {
+  padding-left: 15px;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px; }
+.container.container-login .input-group .btn {
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px; }
+.container.container-login .tile h1 {
+  margin: 1px auto 23px; }
+.container.container-login .social-media-btns {
+  padding: 12px; }
+  .container.container-login .social-media-btns > div {
+    padding: 3px; }
+    .container.container-login .social-media-btns > div i.fab {
+      padding-right: 10px; }
+
+/*# sourceMappingURL=style.css.map */

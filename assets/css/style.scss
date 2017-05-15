@@ -1,0 +1,212 @@
+$gold: #ffce2e;
+
+html, body {
+	background-color: #fff;
+}
+
+.animate, .animate:hover, .animate:focus {
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	line-height: 46px;
+	font-size: 46px;
+	margin: 0 0 23px 0;
+}
+
+h2 {
+	font-family: 'Permanent Marker', cursive;
+	font-weight: normal;
+	font-size: 31px;
+	line-height: 23px;
+	margin: 0 0 23px 0;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	line-height: 23px;
+	margin: 0 0 23px 0;
+	font-weight: 300;
+}
+
+.divider {
+	background: $gold;
+	height: 5px;
+	width: 55px;
+	border-radius: 1px;
+	display: inline-block;
+	margin: -5px auto 30px;
+}
+
+.tile {
+	background: #444;
+	padding: 50px 30px;
+}
+
+.navbar {
+	background: transparent;
+	border-bottom: 0;
+
+	.navbar-brand {
+		font-family: 'Permanent Marker', cursive;
+		color: #ffce2e;
+		&:hover {
+			color: $gold;
+		}
+	}
+
+	li a {
+		color: white;
+	}
+}
+
+.btn {
+	font-size: 15px;
+	text-shadow: none;
+	border: none;
+	border-radius: 2px;
+	font-weight: 300;
+
+	&.btn-gold {
+		background: $gold;
+	}
+	&.btn-facebook {
+		background: #3b5998;
+		color: white;
+	}
+	&.btn-twitter {
+		background: #1da1f2;
+		color: white;
+	}
+	&.btn-google {
+		background: #dd4b39;
+		color: white;
+	}
+	&.btn-instagram {
+		background: #405de6;
+		color: white;
+	}
+	&.btn-tumblr {
+		background: #35465c;
+		color: white;
+	}
+	&.btn-reddit {
+		background: #ff4500;
+		color: white;
+	}
+}
+
+.jumbotron {
+	background: url('../img/bg.png') center center;
+	padding: 120px;
+	background-size: cover;
+	text-align: center;
+	color: #ffffff;
+
+	h1, h2 {
+		text-shadow: 1px 1px 1px #222;
+	}
+
+	h1 {
+		font-weight: bold;
+	}
+
+	h2 {
+		font-size: 28px;
+		line-height: 10px;
+		color: $gold;
+	}
+
+	.btn {
+		padding: 10px 30px;
+		font-weight: 300;
+		font-size: 15px;
+	}
+
+}
+
+.bg {
+	padding: 40px 0;
+
+	&.bg-white {
+		background: white;
+		color: #222;
+	}
+	&.bg-grey {
+		background: #222;
+		color: white;
+	}
+}
+
+.container {
+	&.container-how-it-works {
+		text-align: center;
+
+		h2 {
+			margin: 10px auto 5px;
+		}
+
+		.step {
+			.bt-border {
+				@extend .animate;
+			}
+
+			&:hover {
+				.bt-border {
+					@extend .animate;
+					border-color: $gold;
+				}
+			}
+		}
+	}
+
+	&.container-login {
+
+		h1 {
+			margin: 50px auto 23px;
+		}
+		.input-group {
+
+			input, .btn {
+				font-weight: 300;
+				font-family: 'Lato', sans-serif;
+				padding: 6.5px 25px;
+				font-size: 15px;
+				border: 0;
+			}
+			input {
+				padding-left: 15px;
+				border-top-left-radius: 1px;
+				border-bottom-left-radius: 1px;
+			}
+			.btn {
+				border-top-right-radius: 1px;
+				border-bottom-right-radius: 1px;
+			}
+		}
+
+		.tile {
+			h1 {
+				margin: 1px auto 23px;
+			}
+		}
+		.social-media-btns {
+			padding: 12px;
+			> div {
+				padding: 3px;
+
+
+				i.fab {
+					padding-right: 10px;
+				}
+			}
+		}
+
+	}
+}
