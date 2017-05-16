@@ -73,7 +73,7 @@ class Auth extends Core
 			$this->addUser($userProfile, "facebook");
 		} else {
 			$this->setSession($userProfile, "facebook");
-			$this->redirect("quiz");
+			$this->redirect("create-quiz");
 		}
 	}
 
@@ -87,7 +87,7 @@ class Auth extends Core
 		if ($this->onCallbackPage) {
 			$this->addUser($userProfile, "twitter");
 		} else {
-			$this->redirect("quiz");
+			$this->redirect("create-quiz");
 		}
 	}
 
@@ -104,7 +104,7 @@ class Auth extends Core
 			if ($this->onCallbackPage) {
 				$this->addUser($userProfile, "google");
 			} else {
-				$this->redirect("quiz");
+				$this->redirect("create-quiz");
 			}
 		} else {
 			$this->message("The Google 0Auth API requires you to verify each domain you use their API on. As you cannot verify localhost, logging in with Google is blocked. Go to product to enable this.", "danger");
@@ -122,7 +122,7 @@ class Auth extends Core
 			if ($this->onCallbackPage) {
 				$this->addUser($userProfile, "instagram");
 			} else {
-				$this->redirect("quiz");
+				$this->redirect("create-quiz");
 			}
 		} else {
 			$this->message("Either your Instagram 0Auth app is in sandbox mode and can't view the email address, or the user has no email address.", "danger");
@@ -139,7 +139,7 @@ class Auth extends Core
 		if ($this->onCallbackPage) {
 			$this->addUser($userProfile, "tumblr");
 		} else {
-			$this->redirect("quiz");
+			$this->redirect("create-quiz");
 		}
 	}
 
@@ -152,7 +152,7 @@ class Auth extends Core
 		if ($this->onCallbackPage) {
 			$this->addUser($userProfile, "reddit");
 		} else {
-			$this->redirect("quiz");
+			$this->redirect("create-quiz");
 		}
 	}
 
@@ -208,10 +208,10 @@ class Auth extends Core
 				$this->debug($query->errorInfo());
 			}
 
-			$this->redirect("quiz");
+			$this->redirect("create-quiz");
 		} else if (empty($data->email)) {
 			$this->message("There is no email address given from " . $socialMediaType . ".", "danger");
-			$this->redirect("quiz");
+			$this->redirect("create-quiz");
 		} else {
 			$this->updateUser($data, $socialMediaType);
 		}
@@ -247,7 +247,7 @@ class Auth extends Core
 			$this->debug($query->errorInfo());
 		}
 
-		$this->redirect("quiz");
+		$this->redirect("create-quiz");
 	}
 
 	private function setSession($data, $socialMediaType)

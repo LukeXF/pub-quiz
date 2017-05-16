@@ -6,8 +6,8 @@
 			<div class="col-md-12">
 				<h1>The Great British Pub Quiz</h1>
 				<h2>The right way to compete against your friends</h2>
-				<a class="btn btn-default btn-gold btn-lg" href="#" role="button">Choose a quiz</a>
-				<a class="btn btn-default btn-lg" href="#" role="button">Leaderboards</a>
+				<a class="btn btn-default btn-gold btn-lg" href="create-quiz.php" role="button">Choose a quiz</a>
+				<a class="btn btn-default btn-lg" href="leaderboards.php" role="button">Leaderboards</a>
 
 			</div>
 		</div>

@@ -1,7 +1,7 @@
 html, body {
   background-color: #fff; }
 
-.animate, .navbar .dropdown, .navbar .dropdown-toggle, .container.container-how-it-works .step .bt-border, .container.container-how-it-works .step:hover .bt-border, .container.container-category .box, .animate:hover, .navbar .dropdown:hover, .navbar .dropdown-toggle:hover, .container.container-how-it-works .step .bt-border:hover, .container.container-category .box:hover, .animate:focus, .navbar .dropdown:focus, .navbar .dropdown-toggle:focus, .container.container-how-it-works .step .bt-border:focus, .container.container-category .box:focus {
+.animate, .navbar .dropdown, .navbar .dropdown-toggle, .container.container-how-it-works .step .bt-border, .container.container-how-it-works .step:hover .bt-border, .container.container-category .box, .container.container-questions .tile-question .answer-title, .container.container-questions .tile-answer .answer-title, .container.container-questions .tile-results .answer-title, .animate:hover, .navbar .dropdown:hover, .navbar .dropdown-toggle:hover, .container.container-how-it-works .step .bt-border:hover, .container.container-category .box:hover, .container.container-questions .tile-question .answer-title:hover, .container.container-questions .tile-answer .answer-title:hover, .container.container-questions .tile-results .answer-title:hover, .animate:focus, .navbar .dropdown:focus, .navbar .dropdown-toggle:focus, .container.container-how-it-works .step .bt-border:focus, .container.container-category .box:focus, .container.container-questions .tile-question .answer-title:focus, .container.container-questions .tile-answer .answer-title:focus, .container.container-questions .tile-results .answer-title:focus {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -116,6 +116,9 @@ p {
   background-size: cover;
   text-align: center;
   color: #ffffff; }
+  .jumbotron.jumbotron-small {
+    padding: 50px;
+    margin-bottom: 0; }
   .jumbotron h1, .jumbotron h2 {
     text-shadow: 1px 1px 1px #222; }
   .jumbotron h1 {
@@ -214,5 +217,58 @@ p {
     font-size: 30px; }
   .container.container-category .box.box-final:hover {
     cursor: default; }
+.container.container-questions #loader {
+  margin: 150px auto;
+  text-align: center; }
+.container.container-questions .tile-question, .container.container-questions .tile-answer, .container.container-questions .tile-results {
+  background-color: #444;
+  margin: 4px auto;
+  color: white;
+  padding: 50px; }
+  .container.container-questions .tile-question .question-question, .container.container-questions .tile-question .answer-answer, .container.container-questions .tile-answer .question-question, .container.container-questions .tile-answer .answer-answer, .container.container-questions .tile-results .question-question, .container.container-questions .tile-results .answer-answer {
+    font-size: 15px;
+    margin: 0 20px -55px;
+    color: #999; }
+  .container.container-questions .tile-question .question-title, .container.container-questions .tile-answer .question-title, .container.container-questions .tile-results .question-title {
+    background: #222;
+    padding: 35px 20px 25px; }
+  .container.container-questions .tile-question .answer-title, .container.container-questions .tile-answer .answer-title, .container.container-questions .tile-results .answer-title {
+    background: #222;
+    padding: 35px 20px 25px;
+    border: 3px solid #222; }
+  .container.container-questions .tile-question .answer-tile, .container.container-questions .tile-answer .answer-tile, .container.container-questions .tile-results .answer-tile {
+    margin-top: 20px; }
+    .container.container-questions .tile-question .answer-tile:hover, .container.container-questions .tile-answer .answer-tile:hover, .container.container-questions .tile-results .answer-tile:hover {
+      cursor: pointer; }
+      .container.container-questions .tile-question .answer-tile:hover .answer-title, .container.container-questions .tile-answer .answer-tile:hover .answer-title, .container.container-questions .tile-results .answer-tile:hover .answer-title {
+        border: 3px solid #ffce2e; }
+    .container.container-questions .tile-question .answer-tile .answer-answer, .container.container-questions .tile-answer .answer-tile .answer-answer, .container.container-questions .tile-results .answer-tile .answer-answer {
+      margin: 0 20px -45px; }
+.container.container-questions .tile-results.tile-green {
+  border: 3px solid green; }
+.container.container-questions .tile-results.tile-red {
+  border: 3px solid red; }
+.container.container-questions .tile-results .result-your-answer, .container.container-questions .tile-results .result-correct-answer, .container.container-questions .tile-results .answer-answer {
+  cursor: default; }
+  .container.container-questions .tile-results .result-your-answer:hover .answer-title, .container.container-questions .tile-results .result-correct-answer:hover .answer-title, .container.container-questions .tile-results .answer-answer:hover .answer-title {
+    border: 3px solid #222; }
+.container.container-questions .tile-overview {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  margin-bottom: 15px; }
+  .container.container-questions .tile-overview h2 {
+    margin: 15px auto 25px;
+    font-size: 65px; }
+
+.progress {
+  height: 4px;
+  border-radius: 0;
+  margin: 0 15px -5px; }
+
+.progress-bar-animation {
+  transition-duration: 20s;
+  -webkit-transition-timing-function: linear;
+  /* Safari and Chrome */
+  transition-timing-function: linear; }
 
 /*# sourceMappingURL=style.css.map */

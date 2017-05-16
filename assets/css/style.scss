@@ -161,6 +161,11 @@ p {
 	text-align: center;
 	color: #ffffff;
 
+	&.jumbotron-small {
+		padding: 50px;
+		margin-bottom: 0;
+	}
+
 	h1, h2 {
 		text-shadow: 1px 1px 1px #222;
 	}
@@ -313,18 +318,18 @@ p {
 			}
 
 			&.box-difficulty {
-				 background: #444;
-				 color: #fff;
-				 padding: 20px 10px 10px;
+				background: #444;
+				color: #fff;
+				padding: 20px 10px 10px;
 
-				 &:hover {
-					 color: $gold;
-				 }
+				&:hover {
+					color: $gold;
+				}
 
-				 &.selected {
-					 background-color: #666;
-					 color: $gold;
-				 }
+				&.selected {
+					background-color: #666;
+					color: $gold;
+				}
 			}
 
 			&.box-type, &.box-final {
@@ -337,4 +342,94 @@ p {
 			}
 		}
 	}
+
+	&.container-questions {
+		#loader {
+			margin: 150px auto;
+			text-align: center;
+		}
+
+		.tile-question, .tile-answer, .tile-results {
+			background-color: #444;
+			margin: 4px auto;
+			color: white;
+			padding: 50px;
+
+			.question-question, .answer-answer {
+				font-size: 15px;
+				margin: 0 20px -55px;
+				color: #999;
+			}
+
+			.question-title {
+				background: #222;
+				padding: 35px 20px 25px;
+			}
+
+			.answer-title {
+				@extend .animate;
+				background: #222;
+				padding: 35px 20px 25px;
+				border: 3px solid #222;
+
+			}
+
+			.answer-tile {
+				margin-top: 20px;
+
+				&:hover {
+					cursor: pointer;
+					.answer-title {
+						border: 3px solid $gold;
+					}
+				}
+				.answer-answer {
+					margin: 0 20px -45px;
+				}
+			}
+		}
+
+		.tile-results {
+
+			&.tile-green {
+				border: 3px solid green;
+			}
+
+			&.tile-red {
+				border: 3px solid red;
+			}
+			.result-your-answer, .result-correct-answer, .answer-answer {
+				cursor: default;
+				&:hover {
+					.answer-title {
+						border: 3px solid #222;
+					}
+				}
+			}
+		}
+
+		.tile-overview {
+			text-align: center;
+			font-family: 'Permanent Marker', cursive;
+			margin-bottom: 15px;
+			h2 {
+				margin: 15px auto 25px;
+				font-size: 65px;
+			}
+		}
+
+	}
+}
+
+.progress {
+	height: 4px;
+	border-radius: 0;
+	margin: 0 15px -5px;
+
+}
+
+.progress-bar-animation {
+	transition-duration: 20s;
+	-webkit-transition-timing-function: linear; /* Safari and Chrome */
+	transition-timing-function: linear;
 }
