@@ -20,9 +20,9 @@
 	        integrity="sha256-IFHWFEbU2/+wNycDECKgjIRSirRNIDp2acEB5fvdVRU=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
 	        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
-	<script src="assets/js/create-quiz.js"></script>
-	<script src="assets/js/quiz.js"></script>
 	<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+	<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
+	<script> var categories = <?php echo json_encode($config['quiz']['categories']); ?>;</script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-grey">
@@ -41,6 +41,7 @@
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
+				<li><a class='animate' href='leaderboards.php'>Leaderboards</a></li>
 				<li class='current'>
 					<?= $core->navLogin(); ?>
 				</li>
@@ -48,3 +49,4 @@
 		</div>
 	</div>
 </nav>
+<?php // $core->debug($_SESSION); ?>

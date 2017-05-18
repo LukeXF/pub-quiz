@@ -1,6 +1,11 @@
-<?php require("assets/header.php"); ?>
+<?php require("assets/header.php");
 
-<div class="jumbotron">
+if (!$core->is_logged_in() ) {
+	header("Refresh:0; url=login.php");
+} else { ?>
+<script src="assets/js/create-quiz.js"></script>
+
+<div class="jumbotron jumbotron-small">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -76,3 +81,4 @@
 		</div>
 	</div>
 </div>
+<?php } ?>

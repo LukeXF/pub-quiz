@@ -22,10 +22,19 @@ class Quiz extends Core {
 	}
 
 	public function displayDifficulties() {
+
 		foreach ( $this->quizConfig['difficulty'] as $difficulty => $multiplier ) {
+
+			if ( $difficulty != "medium" ) {
+				$beta = "beta";
+			} else {
+				$beta = "";
+			}
+
 			echo "
 				<div class='col-md-3'>
 					<div class='box box-difficulty' id='" . $difficulty . "'>
+						<i>" . $beta . "</i>
 						" . $difficulty . "<br>
 						<h5>" . $multiplier . "x multiplier</h5>
 					</div>
@@ -35,9 +44,17 @@ class Quiz extends Core {
 
 	public function displayTypes() {
 		foreach ( $this->quizConfig['types'] as $types => $textType ) {
+
+			if ($types != "multiple") {
+				$beta = "beta";
+			} else {
+				$beta = "";
+			}
+
 			echo "
 				<div class='col-md-6'>
 					<div class='box box-type' id='" . $types . "'>
+						<i>" . $beta . "</i>
 						" . $textType . "<br>
 					</div>
 				</div>";

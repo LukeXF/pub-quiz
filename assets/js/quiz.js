@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	console.log($.urlParam("category"));
+	//console.log($.urlParam("category"));
 
 	var category = $.urlParam("category");
 	var difficulty = $.urlParam("difficulty");
@@ -23,13 +23,13 @@ $(document).ready(function () {
 
 	var fullUrl = "https://opentdb.com/api.php?amount=20" + categoryUrl + difficultyUrl + typeUrl;
 	console.log(fullUrl);
-	testAjax(fullUrl)
+	getQuizData(fullUrl);
 
 
 });
 
 
-function testAjax(fullUrl) {
+function getQuizData(fullUrl) {
 	$.ajax({
 		url: fullUrl,
 		success: function (data) {
@@ -44,8 +44,8 @@ function testAjax(fullUrl) {
  * @param {object} data.results -
  */
 function handleData(data) {
-	console.log(data);
-	console.log(data.results);
+	//console.log(data);
+	//console.log(data.results);
 
 	var currentQuestion = 0;
 	var chosenAnswers = [];
@@ -103,7 +103,7 @@ function handleData(data) {
 		clearTimeout(time_out);
 		time_out = setTimeout(nextQuestion(this), 800);
 
-		if (currentQuestion >= 20) {
+		if (currentQuestion >= 2) {
 			results();
 		}
 	});
@@ -115,7 +115,7 @@ function handleData(data) {
 
 	function nextQuestion(thing) {
 		chosenAnswers.push($(thing).html());
-		console.log(chosenAnswers);
+		//console.log(chosenAnswers);
 
 		var currentQuestionTile = "#tile-question-" + currentQuestion;
 		var progress = ".progress";
@@ -148,12 +148,16 @@ function handleData(data) {
 	}
 
 	function results() {
-		console.log("FINISHEd");
+		console.log("FINISHED");
 		clearTimeout(forceMoveOn);
 		$(".progress").fadeOut(800);
 		$(".tile-question").fadeOut(800);
 		$(".tile-results").delay(800).fadeIn(800);
 		$(".tile-overview").delay(800).fadeIn(800);
+
+
+		loadLeaderboards("api.php?type=getLeaderboards");
+		$("#leaderboards-results").delay(800).fadeIn(800);
 
 		$.each(chosenAnswers, function (key, answer) {
 
@@ -169,7 +173,7 @@ function handleData(data) {
 		});
 
 		var amountRight = $(".tile-green").length;
-		$("#tile-final-amount-right h2").html( amountRight + "/20");
+		$("#tile-final-amount-right h2").html(amountRight + "/20");
 
 
 		var difficulty = $.urlParam("difficulty");
@@ -177,12 +181,33 @@ function handleData(data) {
 		var multiplier = 1;
 		if (difficulty == "easy") {
 			multiplier = 0.5;
-		}  else if (difficulty == "hard") {
+		} else if (difficulty == "hard") {
 			multiplier = 1.5;
 		}
 
-		$("#tile-final-score h2").html( amountRight * multiplier * 150);
+		var score = amountRight * multiplier * 150;
+		$("#tile-final-score h2").html(score);
+		sendResults($.urlParam("category"), score);
 
+	}
+
+	function sendResults(category, score) {
+
+		$.ajax({
+			type: "POST",
+			url: "api.php",
+			// The key needs to match your method's input parameter (case-sensitive).
+			data: {"type": "addScore", "category": category, "score": score},
+			dataType: "json",
+			success: function (data) {
+				console.log(data);
+			},
+			error: function (errMsg) {
+				console.log(errMsg);
+			}
+
+
+		});
 	}
 }
 
