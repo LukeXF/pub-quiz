@@ -48,7 +48,6 @@ Project Completion:
   - [x] 20 second timelimit cycle
   - [x] Results overview
   - [x] Quiz and Results design
-<<<<<<< HEAD
 - [x] Leaderboard system
   - [x] Ranking against other users
   - [ ] Pagination
@@ -58,13 +57,4 @@ Project Completion:
   - [x] Leaderboard design
   - [x] API system for leaderboard AJAX requests
   - [ ] Leaderboard visual limit
-=======
-- [ ] Leaderboard system
-  - [ ] Ranking against other users
-  - [ ] Pagination
-  - [ ] Search functionality
-  - [ ] Compare with friends (Facebook/Twitter)
-  - [ ] Recording overall result to database
-  - [ ] Leaderboard design
 
->>>>>>> origin/master
